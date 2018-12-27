@@ -1,0 +1,19 @@
+{
+  "name": "MyPlugin",
+  "version": "0.0.1",
+  "description": "this is myplugin ",
+  "cordova": {
+    "id": "xyh",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "xyh",
+  "license": "MIT"
+}

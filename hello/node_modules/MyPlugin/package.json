@@ -1,0 +1,53 @@
+{
+  "_args": [
+    [
+      "/Users/zt/Desktop/plugman/MyPlugin",
+      "/Users/zt/Desktop/plugman/hello"
+    ]
+  ],
+  "_from": "../MyPlugin",
+  "_id": "MyPlugin@0.0.1",
+  "_inCache": true,
+  "_location": "/MyPlugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": null,
+    "raw": "/Users/zt/Desktop/plugman/MyPlugin",
+    "rawSpec": "/Users/zt/Desktop/plugman/MyPlugin",
+    "scope": null,
+    "spec": "/Users/zt/Desktop/plugman/MyPlugin",
+    "type": "directory"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "file:../MyPlugin",
+  "_shasum": "79b753d005615a66a93e4031d0ea331ce1e50c17",
+  "_shrinkwrap": null,
+  "_spec": "/Users/zt/Desktop/plugman/MyPlugin",
+  "_where": "/Users/zt/Desktop/plugman/hello",
+  "author": {
+    "name": "xyh"
+  },
+  "cordova": {
+    "id": "xyh",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "this is myplugin ",
+  "devDependencies": {},
+  "installable": true,
+  "keywords": [
+    "cordova-android",
+    "cordova-ios",
+    "ecosystem:cordova"
+  ],
+  "license": "MIT",
+  "name": "MyPlugin",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "0.0.1"
+}
