@@ -1,5 +1,6 @@
 # mycordova-Plugman-demo
 使用plugman命令行创建的一个包含ios和android平台的cordova插件外壳，
+本项目中包含了cordova app使用该cordova plugin的demo
 
 插件id为xyh插件名为MyPlugin，在前端直接调用MyPlugin.plus([参数1,参数2],function(success){},function error(err){})
 
