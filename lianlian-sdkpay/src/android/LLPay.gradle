@@ -1,0 +1,10 @@
+repositories{
+  jcenter()
+  flatDir {
+      dirs 'libs'
+   }
+}
+
+dependencies {
+  compile(name: 'securePay-180522-v3.2.1.4', ext: 'aar')
+}

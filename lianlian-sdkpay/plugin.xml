@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-lianlian-sdkpay"
+        version="1.0.0">
+
+    <name>LianLian Pay Cordova Plugin</name>
+    <description>Cordova/PhoneGap plugin for LianLian Pay</description>
+    <author>Cheer</author>
+    <license>MIT</license>
+    <keywords>cordova,lianlianpay,pay,payment</keywords>
+    <repo></repo>
+    <issue></issue>
+
+    <!-- js module-->
+    <js-module src="www/LLPay.js" name="LLPay">
+        <clobbers target="window.LLPay"/>
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="LLPay">
+                <param name="ios-package" value="LLPayPlugin"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/LLPaySdk.h"/>
+        <header-file src="src/ios/LLPayPlugin.h"/>
+        <source-file src="src/ios/LLPayPlugin.m"/>
+        <header-file src="src/ios/CDVPluginExt.h"/>
+        <source-file src="src/ios/CDVPluginExt.m"/>
+        <source-file src="src/ios/libLLPaySDK.a" framework="true"/>
+        <source-file src="src/ios/libLLPaySDKCore.a" framework="true"/>
+        <resource-file src="src/ios/walletResources.bundle"/>
+
+        <framework src="CoreTelephony.framework"/>
+    </platform>
+
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity
+                android:name="com.yintong.secure.activity.BaseActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                android:windowSoftInputMode="adjustResize">
+            </activity>
+            <service android:name="com.yintong.secure.service.PayService"></service>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+            <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+            <uses-permission android:name="android.permission.READ_SMS"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+        </config-file>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="LLPay">
+                <param name="android-package" value="com.cheer.cordova.lianlianpay.LLPayPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/LLPayPlugin.java" target-dir="src/com/cheer/cordova/lianlianpay"/>
+        <source-file src="src/android/CordovaPluginExt.java" target-dir="src/com/cheer/cordova/ext"/>
+        <source-file src="src/android/Constants.java" target-dir="src/com/yintong/pay/utils"/>
+        <source-file src="src/android/MobileSecurePayer.java" target-dir="src/com/yintong/pay/utils"/>
+
+        <source-file src="src/android/securePay-180522-v3.2.1.4.aar" target-dir="libs"/>
+        <framework src="src/android/LLPay.gradle" custom="true" type="gradleReference"/>
+    </platform>
+
+</plugin>

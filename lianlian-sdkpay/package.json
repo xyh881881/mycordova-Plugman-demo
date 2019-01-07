@@ -1,0 +1,23 @@
+{
+    "name": "cordova-plugin-lianlian-sdkpay",
+    "version": "1.0.0",
+    "description": "lianlian sdk pay plugin",
+    "cordova": {
+        "id": "cordova-plugin-lianlian-sdkpay",
+        "platforms": [
+            "ios",
+            "android"
+        ]
+    },
+    "keywords": [
+        "ecosystem:cordova",
+        "cordova-ios",
+        "cordova-android",
+        "pay",
+        "payment",
+        "lianlianpay",
+        "llpay"
+    ],
+    "author": "Cheer",
+    "license": "MIT"
+}
